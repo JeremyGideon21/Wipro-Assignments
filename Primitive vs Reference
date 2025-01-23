@@ -1,0 +1,24 @@
+public class PrimitiveVsReference {
+
+    public static void modifyPrimitive(int number) {
+        number = 50;
+        System.out.println("Inside modifyPrimitive: " + number);
+    }
+
+    public static void modifyReference(StringBuilder builder) {
+        builder.append(" World!");
+        System.out.println("Inside modifyReference: " + builder);
+    }
+
+    public static void main(String[] args) {
+        int primitiveVar = 10;
+        System.out.println("Before modifyPrimitive: " + primitiveVar);
+        modifyPrimitive(primitiveVar);
+        System.out.println("After modifyPrimitive: " + primitiveVar);
+
+        StringBuilder referenceVar = new StringBuilder("Hello");
+        System.out.println("\nBefore modifyReference: " + referenceVar);
+        modifyReference(referenceVar);
+        System.out.println("After modifyReference: " + referenceVar); 
+    }
+}
