@@ -1,0 +1,43 @@
+public class DefaultValuesDemo {
+
+    // Instance variables
+    byte byteVar;
+    short shortVar;
+    int intVar;
+    long longVar;
+    float floatVar;
+    double doubleVar;
+    char charVar;
+    boolean booleanVar;
+    String stringVar;
+
+    static int staticIntVar;
+    static double staticDoubleVar;
+
+    public void displayInstanceDefaults() {
+        System.out.println("Instance Variable Default Values:");
+        System.out.println("byte: " + byteVar);
+        System.out.println("short: " + shortVar);
+        System.out.println("int: " + intVar);
+        System.out.println("long: " + longVar);
+        System.out.println("float: " + floatVar);
+        System.out.println("double: " + doubleVar);
+        System.out.println("char: '" + charVar + "' (Unicode value: " + (int) charVar + ")");
+        System.out.println("boolean: " + booleanVar);
+        System.out.println("String: " + stringVar);
+    }
+
+    public static void displayStaticDefaults() {
+        System.out.println("\nStatic Variable Default Values:");
+        System.out.println("int: " + staticIntVar);
+        System.out.println("double: " + staticDoubleVar);
+    }
+
+    public static void main(String[] args) {
+        DefaultValuesDemo demo = new DefaultValuesDemo();
+  
+        demo.displayInstanceDefaults();
+
+        displayStaticDefaults();
+    }
+}
