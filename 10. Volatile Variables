@@ -1,0 +1,26 @@
+class VolatileExample {
+
+    // Volatile variable to ensure visibility between threads
+    private static volatile boolean running = true;
+
+    public static void main(String[] args) {
+        Thread thread = new Thread(() -> {
+            System.out.println("Thread started...");
+            while (running) {
+                // Busy-wait loop
+            }
+            System.out.println("Thread stopped.");
+        });
+
+        thread.start();
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Stopping thread...");
+        running = false; // Update the volatile variable
+    }
+}
