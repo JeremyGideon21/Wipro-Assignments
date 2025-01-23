@@ -1,0 +1,23 @@
+public class ShadowingExample {
+    int x = 10;
+
+    public void demonstrateShadowing() {
+    
+        int x = 20;
+
+        System.out.println("Method-level x: " + x);
+        System.out.println("Class-level x (using 'this'): " + this.x);
+
+        if (x > 0) {
+            int x = 30; // Block-level variable shadows method-level variable
+            System.out.println("Block-level x: " + x);
+        }
+
+        System.out.println("After block, method-level x: " + x);
+    }
+
+    public static void main(String[] args) {
+        ShadowingExample obj = new ShadowingExample();
+        obj.demonstrateShadowing();
+    }
+}
