@@ -1,0 +1,26 @@
+public class FinalVariableDemo {
+
+    final int finalVariable = 10;
+
+    final int anotherFinalVariable;
+
+    public FinalVariableDemo(int value) {
+        this.anotherFinalVariable = value;
+    }
+
+    public void demonstrateFinalBehavior() {
+        System.out.println("Final Variable (declared and initialized): " + finalVariable);
+        System.out.println("Another Final Variable (initialized in constructor): " + anotherFinalVariable);
+
+        final StringBuilder finalObject = new StringBuilder("Initial Value");
+        System.out.println("Final Object Value: " + finalObject);
+
+        finalObject.append(" Modified");
+        System.out.println("Modified Final Object Value: " + finalObject);
+    }
+
+    public static void main(String[] args) {
+        FinalVariableDemo demo = new FinalVariableDemo(20);
+        demo.demonstrateFinalBehavior();
+    }
+}
