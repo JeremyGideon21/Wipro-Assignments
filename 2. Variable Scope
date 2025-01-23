@@ -1,0 +1,30 @@
+public class VariableScopeDemo {
+
+    int instanceVariable = 100;
+    static int staticVariable = 200; 
+
+    public void methodScope() {
+        int localVariable = 10;
+        System.out.println("Inside methodScope:");
+        System.out.println("Local Variable: " + localVariable);
+        System.out.println("Instance Variable: " + instanceVariable);
+        System.out.println("Static Variable: " + staticVariable);
+
+        if (localVariable > 5) {
+            int blockVariable = 50;
+            System.out.println("Block Variable: " + blockVariable);
+        }
+
+    }
+
+    public static void main(String[] args) {
+        VariableScopeDemo obj = new VariableScopeDemo();
+
+        System.out.println("In main method:");
+        System.out.println("Instance Variable (via object): " + obj.instanceVariable);
+        System.out.println("Static Variable: " + staticVariable);
+
+        obj.methodScope();
+r
+    }
+}
