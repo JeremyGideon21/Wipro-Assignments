@@ -1,0 +1,30 @@
+public class VariableTypesDemo {
+    
+    int instanceVariable = 10;
+
+    static int staticVariable = 20;
+
+    public void methodExample() {
+       
+        int localVariable = 30;
+        System.out.println("Local Variable: " + localVariable);
+    }
+
+    public static void main(String[] args) {
+      
+        VariableTypesDemo obj1 = new VariableTypesDemo();
+        VariableTypesDemo obj2 = new VariableTypesDemo();
+
+
+        System.out.println("Instance Variable (obj1): " + obj1.instanceVariable);
+        obj1.instanceVariable = 50;
+        System.out.println("Instance Variable after modification (obj1): " + obj1.instanceVariable);
+        System.out.println("Instance Variable (obj2, unchanged): " + obj2.instanceVariable);
+
+        System.out.println("Static Variable: " + VariableTypesDemo.staticVariable);
+        VariableTypesDemo.staticVariable = 100;
+        System.out.println("Static Variable after modification: " + VariableTypesDemo.staticVariable);
+
+        obj1.methodExample();
+    }
+}
